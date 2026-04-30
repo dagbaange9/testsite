@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPremium | Vente & Location</title>
+    <link rel="stylesheet" href="testsite.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Auto<span>Premium By Ange </span></div>
+        <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Acheter</a></li>
+            <li><a href="#">Louer</a></li>
+            <li><a href="#" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Trouvez la voiture de vos rêves</h1>
+            <p>Le meilleur de l'automobile à portée de clic.</p>
+            
+            <div class="search-box">
+                <div class="filter-group">
+                    <label>Type</label>
+                    <select id="typeFilter">
+                        <option value="all">Tout voir</option>
+                        <option value="Vente">Vente</option>
+                        <option value="Location">Location</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Trier par</label>
+                    <select id="priceSort">
+                        <option value="default">Pertinence</option>
+                        <option value="low">Prix croissant</option>
+                        <option value="high">Prix décroissant</option>
+                    </select>
+                </div>
+                <button class="btn-search" id="filterBtn">Actualiser</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Nos Véhicules</h2>
+        <div class="grid" id="carGrid">
+            <!-- BMW -->
+            <div class="car-card" data-type="Vente" data-price="45000">
+                <div class="car-image" style="background-image: url('https://unsplash.com');">
+                    <span class="badge sale">Vente</span>
+                </div>
+                <div class="car-info">
+                    <h3>BMW Série 3 - 2023</h3>
+                    <p class="price">45 000 €</p>
+                    <div class="specs"><span>⛽ Essence</span><span>🕹️ Auto</span></div>
+                    <button class="btn-view">Détails</button>
+                </div>
+            </div>
+
+            <!-- Mercedes -->
+            <div class="car-card" data-type="Location" data-price="120">
+                <div class="car-image" style="background-image: url('https://unsplash.com');">
+                    <span class="badge rent">Location</span>
+                </div>
+                <div class="car-info">
+                    <h3>Mercedes Classe C</h3>
+                    <p class="price">120 € <span>/ jour</span></p>
+                    <div class="specs"><span>🌿 Hybride</span><span>🕹️ Auto</span></div>
+                    <button class="btn-view">Réserver</button>
+                </div>
+            </div>
+
+            <!-- Audi -->
+            <div class="car-card" data-type="Vente" data-price="62000">
+                <div class="car-image" style="background-image: url('https://unsplash.com');">
+                    <span class="badge sale">Vente</span>
+                </div>
+                <div class="car-info">
+                    <h3>Audi RS3 Sportback</h3>
+                    <p class="price">62 000 €</p>
+                    <div class="specs"><span>⛽ Essence</span><span>🕹️ Auto</span></div>
+                    <button class="btn-view">Détails</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="testsite.js"></script>
+</body>
+</html>
