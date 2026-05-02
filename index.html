@@ -3,90 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoPremium | Vente & Location</title>
+    <title>LuxeDrive | Prestige & Performance</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">Auto<span>Premium By Ange </span></div>
+        <div class="logo">LUXE<span>DRIVE</span></div>
         <ul class="nav-links">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Acheter</a></li>
-            <li><a href="#">Louer</a></li>
-            <li><a href="#" class="btn-contact">Contact</a></li>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#inventory">Catalogue</a></li>
+            <li><a href="#" class="btn-contact">Réservation</a></li>
         </ul>
     </nav>
 
     <header class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Trouvez la voiture de vos rêves</h1>
-            <p>Le meilleur de l'automobile à portée de clic.</p>
+            <h1>L'Exception Automobile</h1>
+            <p>Vente et location de supercars pour passionnés exigeants.</p>
             
             <div class="search-box">
                 <div class="filter-group">
-                    <label>Type</label>
+                    <label>Catégorie</label>
                     <select id="typeFilter">
-                        <option value="all">Tout voir</option>
-                        <option value="Vente">Vente</option>
-                        <option value="Location">Location</option>
+                        <option value="all">Toutes les Supercars</option>
+                        <option value="Vente">À l'achat</option>
+                        <option value="Location">En location</option>
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label>Trier par</label>
+                    <label>Prix</label>
                     <select id="priceSort">
-                        <option value="default">Pertinence</option>
+                        <option value="default">Trier par...</option>
                         <option value="low">Prix croissant</option>
                         <option value="high">Prix décroissant</option>
                     </select>
                 </div>
-                <button class="btn-search" id="filterBtn">Actualiser</button>
+                <button class="btn-primary" id="filterBtn">Filtrer</button>
             </div>
         </div>
     </header>
 
-    <section class="container">
-        <h2 class="section-title">Nos Véhicules</h2>
+    <section class="container" id="inventory">
+        <h2 class="section-title">Notre Collection</h2>
         <div class="grid" id="carGrid">
-            <!-- BMW -->
-            <div class="car-card" data-type="Vente" data-price="45000">
+            
+            <!-- Ferrari -->
+            <div class="car-card" data-type="Vente" data-price="280000">
                 <div class="car-image" style="background-image: url('https://unsplash.com');">
-                    <span class="badge sale">Vente</span>
+                    <span class="badge">Vente</span>
                 </div>
                 <div class="car-info">
-                    <h3>BMW Série 3 - 2023</h3>
-                    <p class="price">45 000 €</p>
-                    <div class="specs"><span>⛽ Essence</span><span>🕹️ Auto</span></div>
-                    <button class="btn-view">Détails</button>
+                    <h3>Ferrari F8 Tributo</h3>
+                    <p class="price">280 000 €</p>
+                    <div class="specs"><span>V8 Biturbo</span><span>720 ch</span></div>
+                    <button class="btn-card">Découvrir</button>
                 </div>
             </div>
 
-            <!-- Mercedes -->
-            <div class="car-card" data-type="Location" data-price="120">
+            <!-- Lamborghini -->
+            <div class="car-card" data-type="Location" data-price="1500">
                 <div class="car-image" style="background-image: url('https://unsplash.com');">
                     <span class="badge rent">Location</span>
                 </div>
                 <div class="car-info">
-                    <h3>Mercedes Classe C</h3>
-                    <p class="price">120 € <span>/ jour</span></p>
-                    <div class="specs"><span>🌿 Hybride</span><span>🕹️ Auto</span></div>
-                    <button class="btn-view">Réserver</button>
+                    <h3>Lamborghini Huracán</h3>
+                    <p class="price">1 500 € <span>/ jour</span></p>
+                    <div class="specs"><span>V10 Atmo</span><span>640 ch</span></div>
+                    <button class="btn-card">Réserver</button>
                 </div>
             </div>
 
-            <!-- Audi -->
-            <div class="car-card" data-type="Vente" data-price="62000">
+            <!-- Bugatti -->
+            <div class="car-card" data-type="Vente" data-price="3200000">
                 <div class="car-image" style="background-image: url('https://unsplash.com');">
-                    <span class="badge sale">Vente</span>
+                    <span class="badge">Vente</span>
                 </div>
                 <div class="car-info">
-                    <h3>Audi RS3 Sportback</h3>
-                    <p class="price">62 000 €</p>
-                    <div class="specs"><span>⛽ Essence</span><span>🕹️ Auto</span></div>
-                    <button class="btn-view">Détails</button>
+                    <h3>Bugatti Chiron</h3>
+                    <p class="price">3 200 000 €</p>
+                    <div class="specs"><span>W16 Quattro</span><span>1500 ch</span></div>
+                    <button class="btn-card">Découvrir</button>
                 </div>
             </div>
+
         </div>
     </section>
 
