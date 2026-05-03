@@ -1,0 +1,123 @@
+/* --- VARIABLES DE COULEURS (Rappel de l'accueil) --- */
+:root {
+    --primary: #c5a059;   /* L'or iconique */
+    --dark: #0f0f0f;      /* Noir profond */
+    --card-bg: #1a1a1a;   /* Gris anthracite */
+    --text: #ffffff;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+/* --- STYLE GÉNÉRAL DE LA PAGE RÉSERVATION --- */
+.page-reservation {
+    background: radial-gradient(circle at top right, #1a1a1a, #0f0f0f);
+    min-height: 100vh;
+}
+
+/* --- LE CONTAINER DE RÉSERVATION --- */
+.reservation-container {
+    max-width: 850px;
+    margin: 60px auto;
+    background: var(--glass);
+    backdrop-filter: blur(10px); /* Effet de flou moderne */
+    padding: 60px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Petit liseré doré décoratif en haut */
+.reservation-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+/* --- TITRES --- */
+.res-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--text);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.res-header p {
+    color: var(--primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* --- CHAMPS DU FORMULAIRE --- */
+.res-form {
+    margin-top: 40px;
+}
+
+.form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 10px;
+    display: block;
+    transition: 0.3s;
+}
+
+.res-form input, 
+.res-form select, 
+.res-form textarea {
+    width: 100%;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol/focus des champs */
+.res-form input:focus, 
+.res-form select:focus, 
+.res-form textarea:focus {
+    border-color: var(--primary);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.1);
+    outline: none;
+}
+
+/* --- BOUTON DE CONFIRMATION --- */
+.full-btn {
+    width: 100%;
+    padding: 18px;
+    background: var(--primary);
+    color: #000;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.full-btn:hover {
+    background: #fff;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .reservation-container {
+        margin: 20px;
+        padding: 30px;
+    }
+    .res-header h1 { font-size: 2rem; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+}

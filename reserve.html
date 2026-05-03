@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver | LuxeDrive</title>
+    <link rel="stylesheet" href="styleReserv.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body class="page-reservation">
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:rgb(244, 240, 240);">LUXE<span style="color: #c5a059;">DRIVE by AngeDams</span></a></div>
+        <ul class="nav-links" style="background-color: #d4bb8d; padding: 5px; margin-left: 70px; margin-right: 400px;border-radius: 5px ">
+            <li><a href="index.html" style=" color: rgb(82, 49, 11)" > ◀Retour à l'accueil</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <div class="reservation-container">
+            <div class="res-header">
+                <h1>Réservation de Prestige</h1>
+                <p>Veuillez renseigner vos informations pour finaliser la mise à disposition du véhicule.</p>
+            </div>
+
+            <form id="bookingForm" class="res-form" data-netlify="true">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Véhicule souhaité</label>
+                        <select name="vehicule" required>
+                            <option value="Ferrari F8">Ferrari F8 Tributo</option>
+                            <option value="Lamborghini Huracan">Lamborghini Huracán</option>
+                            <option value="Bugatti Chiron">Bugatti Chiron</option>
+                            <option value="Autre">Autre modèle (Précisez)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Type de service</label>
+                        <select name="service">
+                            <option value="Achat">Achat</option>
+                            <option value="Location">Location</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nom complet</label>
+                        <input type="text" name="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Téléphone</label>
+                        <input type="tel" name="tel" placeholder="+33 6..." required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email professionnel</label>
+                    <input type="email" name="email" placeholder="votre@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Message ou demandes particulières</label>
+                    <textarea name="message" rows="4" placeholder="Précisez vos besoins..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary full-btn">Envoyer ma demande</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
