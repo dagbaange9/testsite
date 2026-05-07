@@ -1,0 +1,105 @@
+/* --- PAGE DÉCOUVRIR (Correction Couleurs) --- */
+.page-decouvrir {
+    background-color: #0f0f0f; /* Fond noir profond */
+    color: #ffffff;
+}
+
+.page-header { 
+    text-align: center; 
+    padding: 80px 20px; 
+    background: linear-gradient(to bottom, #000000, #0f0f0f); 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.page-header h1 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 3.5rem; 
+    color: #ffffff; /* Titre en blanc */
+}
+
+.page-header p {
+    color: #c5a059; /* Sous-titre en Or */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.model-detail {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    background: #1a1a1a; /* Gris anthracite de l'accueil */
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px; /* Style rectangulaire luxe */
+    padding: 40px;
+}
+
+.model-detail.reverse { flex-direction: row-reverse; }
+
+.model-image {
+    flex: 3;
+    height: 450px;
+    background-size: cover;
+    border: 1px solid rgba(197, 160, 89, 0.2); /* Bordure or très fine */
+}
+
+.model-text h2 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.8rem; 
+    margin: 15px 0; 
+    color: #ffffff;
+}
+
+.category-tag {
+    color: #c5a059; /* Or */
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.description { color: #bbbbbb; line-height: 1.6; margin-bottom: 25px; }
+
+.tech-specs li { 
+    margin-bottom: 12px; 
+    font-size: 0.95rem; 
+    color: #eeeeee; 
+    border-left: 2px solid #c5a059; /* Liseré Or à gauche */
+    padding-left: 15px;
+}
+
+.tech-specs li strong { color: #c5a059; margin-right: 10px; }
+
+/* Boutons d'action */
+.btn-action {
+    display: inline-block;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.btn-action.buy { 
+    border: 1px solid #c5a059; 
+    color: #c5a059; 
+}
+
+.btn-action.buy:hover { 
+    background: #c5a059; 
+    color: #000000; 
+}
+
+.btn-action.rent { 
+    background: #c5a059; 
+    color: #000000; 
+    border: 1px solid #c5a059;
+}
+
+.btn-action.rent:hover { 
+    background: #ffffff; 
+    border-color: #ffffff;
+    transform: translateY(-3px); 
+}
