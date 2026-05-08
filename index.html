@@ -15,6 +15,7 @@
             <li><a href="#home">Accueil</a></li>
             <li><a href="#inventory">Catalogue</a></li>
             <li><a href="reserve.html" class="btn-contact" >Réservation</a></li>
+            <li><a href="admin.html" class="btn-admin">Admin</a></li>
         </ul>
     </nav>
 
@@ -41,7 +42,9 @@
                         <option value="high">Prix décroissant</option>
                     </select>
                 </div>
-                <button class="btn-primary" id="filterBtn">Filtrer</button>
+                <li><a href="#inventory" class="btn-primary"  id="filterBtn" >Filtrer</a></li>
+
+
             </div>
         </div>
     </header>
@@ -49,98 +52,7 @@
     <section class="container" id="inventory">
         <h2 class="section-title">Notre Collection</h2>
         <div class="grid" id="carGrid">
-            
-            <!-- Ferrari -->
-            <div class="car-card" data-type="Vente" data-price="280000">
-                <div class="car-image" style="background-image: url('https://stimg.cardekho.com/images/carexteriorimages/930x620/Ferrari/Purosangue/9317/1663156716477/rear-left-view-121.jpg');">
-                    <span class="badge">Vente</span>
-                </div>
-                <div class="car-info">
-                    <h3>Ferrari F8 Tributo</h3>
-                    <p class="price">280 000 €</p>
-                    <div class="specs"><span>V8 Biturbo</span><span>720 ch</span></div>
-                    <a href="decouvre.html#ferarri" class="btn-card">Découvrir</a>
-
-                </div>
-            </div>
-
-            <!-- Lamborghini -->
-            <div class="car-card" data-type="Location" data-price="1500">
-                <div class="car-image" style="background-image: url('https://img.freepik.com/photos-premium/lamborghini-urus-voiture-devrait-etre-personnalisee-motifs-tribaux-vivants-metalliques_997024-2751.jpg?semt=ais_hybrid&w=740&q=80');">
-                    <span class="badge rent">Location</span>
-                </div>
-                <div class="car-info">
-                    <h3>Lamborghini Urus</h3>
-                    <p class="price">1 500 € <span>/ jour</span></p>
-                    <div class="specs"><span>V10 Atmo</span><span>640 ch</span></div>
-                    <a href="reserve.html" class="btn-card">Réserver</a>
-
-
-                </div>
-            </div>
-
-            <!-- Bugatti -->
-            <div class="car-card" data-type="Vente" data-price="3200000">
-                <div class="car-image" style="background-image: url('https://cdn.motor1.com/images/mgl/L3jqXN/s3/bugatti-w16-mistral.jpg');">
-                    <span class="badge">Vente</span>
-                </div>
-                <div class="car-info">
-                    <h3>Bugatti Chiron</h3>
-                    <p class="price">3 200 000 €</p>
-                    <div class="specs"><span>W16 Quattro</span><span>1500 ch</span></div>
-                    <a href="reserve.html" class="btn-card">Réserver</a>
-
-
-                </div>
-            </div>
-
-
-
-            <div class="car-card" data-type="Vente" data-price="3200000">
-                <div class="car-image" style="background-image: url('https://www.annonces-automobile.com/images/data/actualite/main/110237.jpg');">
-                    <span class="badge">Vente</span>
-                </div>
-                <div class="car-info">
-                    <h3>GLE 63s Full AMG </h3>
-                    <p class="price">3 200 000 €</p>
-                    <div class="specs"><span>W16 Quattro</span><span>1500 ch</span></div>
-                    <a href="decouvre.html#GLE" class="btn-card">Découvrir</a>
-
-                </div>
-            </div>
-
-
-            <div class="car-card" data-type="Vente" data-price="3200000">
-                <div class="car-image" style="background-image: url('https://static0.hotcarsimages.com/wordpress/wp-content/uploads/2023/06/f44_11-jeep392-2star-65.jpg?q=50&fit=crop&w=825&dpr=1.5'); ;">
-                    <span class="badge">Vente</span>
-                </div>
-                <div class="car-info">
-                    <h3> jeep wrangler 4x4 </h3>
-                    <p class="price">3 200 000 €</p>
-                    <div class="specs"><span>W16 Quattro</span><span>1500 ch</span></div>
-                    <button class="btn-card">Découvrir</button>
-                </div>
-
-
-            </div>
-
-            <div class="car-card" data-type="Location" data-price="1800">
-                <div class="car-image" style="background-image: url('https://i.ytimg.com/vi/MFFCKD4bIUg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCTfl8ebmLItOa_5I1LZ_5o2GlFZg');">
-                    <span class="badge rent">Location</span>
-                </div>
-                <div class="car-info"  >
-                    
-                    <h3>Mercedes Benz C300</h3>
-                    <p class="price">1 800 € <span>/ jour</span></p>
-                    <div class="specs"><span>V10 Atmo</span><span>640 ch</span></div>
-                    <button class="btn-card">Découvrir</button>
-
-
-                </div>
-            </div>
-
-
-             
+            <!-- Les produits sont chargés dynamiquement par script.js -->
         </div>
     </section>
 

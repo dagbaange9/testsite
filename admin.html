@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | LuxeDrive</title>
+    <link rel="stylesheet" href="styleAdmin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Section Login -->
+        <div id="loginSection" class="login-section">
+            <div class="login-box">
+                <h1>Connexion Admin</h1>
+                <p>LuxeDrive Administration</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Identifiant</label>
+                        <input type="text" id="username" placeholder="admin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-login">Connexion</button>
+                </form>
+                <div id="loginError" class="error-message"></div>
+            </div>
+        </div>
+
+        <!-- Section Admin Dashboard -->
+        <div id="adminSection" class="admin-section" style="display:none;">
+            <nav class="admin-navbar">
+                <div class="logo">LUXE<span>DRIVE</span> Admin</div>
+                <button id="logoutBtn" class="btn-logout">Déconnexion</button>
+            </nav>
+
+            <div class="admin-content">
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#" data-tab="products" class="tab-link active">Gestion des Produits</a></li>
+                        <li><a href="#" data-tab="add" class="tab-link">Ajouter un Produit</a></li>
+                    </ul>
+                </div>
+
+                <div class="main-content">
+                    <!-- Onglet: Gestion des Produits -->
+                    <div id="productsTab" class="tab-content active">
+                        <h2>Gestion des Produits</h2>
+                        <div class="search-bar">
+                            <input type="text" id="searchProducts" placeholder="Rechercher un produit...">
+                        </div>
+                        <div id="productsList" class="products-list">
+                            <!-- Les produits seront affichés ici -->
+                        </div>
+                    </div>
+
+                    <!-- Onglet: Ajouter un Produit -->
+                    <div id="addTab" class="tab-content">
+                        <h2>Ajouter un Nouveau Produit</h2>
+                        <form id="addProductForm" class="product-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="productName">Nom du Produit *</label>
+                                    <input type="text" id="productName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productType">Type *</label>
+                                    <select id="productType" required>
+                                        <option value="">Sélectionner...</option>
+                                        <option value="Vente">Vente</option>
+                                        <option value="Location">Location</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="productPrice">Prix *</label>
+                                    <input type="number" id="productPrice" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productEngine">Moteur</label>
+                                    <input type="text" id="productEngine" placeholder="ex: V8 Biturbo">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="productPower">Puissance (ch)</label>
+                                    <input type="text" id="productPower" placeholder="ex: 720">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productImage">URL de l'image *</label>
+                                    <input type="url" id="productImage" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="productDescription">Description</label>
+                                    <textarea id="productDescription" rows="4" placeholder="Description du produit"></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-add">Ajouter le Produit</button>
+                        </form>
+                        <div id="addSuccess" class="success-message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal d'édition -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modifier le Produit</h2>
+            <form id="editProductForm" class="product-form">
+                <input type="hidden" id="editProductId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editProductName">Nom du Produit *</label>
+                        <input type="text" id="editProductName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductType">Type *</label>
+                        <select id="editProductType" required>
+                            <option value="Vente">Vente</option>
+                            <option value="Location">Location</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editProductPrice">Prix *</label>
+                        <input type="number" id="editProductPrice" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductEngine">Moteur</label>
+                        <input type="text" id="editProductEngine">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editProductPower">Puissance (ch)</label>
+                        <input type="text" id="editProductPower">
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductImage">URL de l'image *</label>
+                        <input type="url" id="editProductImage" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label for="editProductDescription">Description</label>
+                        <textarea id="editProductDescription" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-save">Sauvegarder</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
